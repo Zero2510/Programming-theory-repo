@@ -7,13 +7,13 @@ public class PlayerMovement : MonoBehaviour
 {
 
     float speed = 10.0f;
-    Rigidbody rb;
+
     public GameObject bullets;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
-            Instantiate(bullets, rb.position + Vector3.forward * 0.5f, Quaternion.identity);
+            Instantiate(bullets, transform.position + Vector3.right * 0.5f, Quaternion.identity);
             Debug.Log("shoot");
 
         }
