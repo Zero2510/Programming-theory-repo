@@ -4,35 +4,19 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    float speed = 10.0f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-      
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-   
-
-
-    }
-
-    public virtual void EnemyMovement()
+    public virtual void EnemyMovement(float speed)
     {
         transform.Translate(new Vector3(1, 0, 0) * Time.deltaTime * speed);
     }
 
 
-
-    public void OnTriggerEnter(Collider other)
+    protected void OutofBounds()
     {
-        Destroy(gameObject);
-        Destroy(other.gameObject);
+        if(transform.position.x < -15)
+        {
+            Destroy(gameObject);
+        }
     }
 
 

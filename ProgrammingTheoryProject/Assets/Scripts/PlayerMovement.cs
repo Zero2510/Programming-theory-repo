@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 
 {
 
-    float speed = 10.0f;
+    private float speed = 10.0f;
 
     public GameObject bullets;
 

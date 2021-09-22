@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class Smallship : Enemy
 {
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private int health = 2;
 
     // Update is called once per frame
     void Update()
     {
-       EnemyMovement();
+       EnemyMovement(10f);
+       OutofBounds();
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        health -= 1;
+        Destroy(other.gameObject);
+
+        if (health < 1)
+        {
+            Destroy(gameObject);
+        }
+    }
 
 }
