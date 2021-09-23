@@ -20,9 +20,11 @@ public class Sinship : Enemy
     {
         health -= 1;
         Destroy(other.gameObject);
+        DamageParticle();
 
         if (health < 1)
         {
+            transform.DetachChildren();
             Destroy(gameObject);
         }
     }
@@ -32,5 +34,6 @@ public class Sinship : Enemy
         transform.Translate(new Vector3(1, Mathf.Sin(Time.time),0) * Time.deltaTime * speed);
         transform.Rotate(new Vector3(1, 0, 0), 0.5f, Space.Self);
     }
+
 
 }

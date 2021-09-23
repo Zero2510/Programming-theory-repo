@@ -4,9 +4,25 @@ using UnityEngine;
 
 public class SaveDataManager : MonoBehaviour
 {
+    
+    private string playerName;
 
-    public string playerName;
-    public static SaveDataManager Instance;
+    public string PlayerName
+    {
+        get
+        {
+            return playerName;
+        }
+        set
+        {
+            playerName = value;
+        }
+    }
+
+
+
+
+    public static SaveDataManager Instance { get; private set; }
 
     void Awake()
     {

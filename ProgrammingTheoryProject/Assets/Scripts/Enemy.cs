@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField]
+    private ParticleSystem damage;
+
 
     public virtual void EnemyMovement(float speed)
     {
@@ -19,5 +22,9 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    protected void DamageParticle()
+    {
+        damage.Play();
+    }
 
 }

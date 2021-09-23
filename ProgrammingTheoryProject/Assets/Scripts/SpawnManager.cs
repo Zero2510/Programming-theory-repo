@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-
-    public GameObject[] enemiesPrefab;
+    [SerializeField]
+    private GameObject[] enemiesPrefab;
     private float spawnLimitYUp = -5;
     private float spawnLimitYDown = 5;
-    private float spawnPosX = 9;
+    private float spawnPosX = 15;
 
     private float startDelay = 3.0f;
     private float spawnInterval = 4.0f;
@@ -18,12 +18,6 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         SpawnEnemy();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     void SpawnEnemy()

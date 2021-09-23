@@ -8,13 +8,22 @@ public class PlayerMovement : MonoBehaviour
 
     private float speed = 10.0f;
 
-    public GameObject bullets;
+    [SerializeField]
+    private GameObject bullets;
 
-    // Start is called before the first frame update
-    void Start()
+    public GameObject Bullets
     {
-
+        get
+        {
+            return bullets;
+        }
+        set
+        {
+            bullets = value;
+        }
     }
+
+
 
     // Update is called once per frame
     void Update()

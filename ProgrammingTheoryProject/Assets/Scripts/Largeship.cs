@@ -7,11 +7,6 @@ public class Largeship : Enemy
 
     private int health = 10;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -24,10 +19,13 @@ public class Largeship : Enemy
     {
         health -= 1;
         Destroy(other.gameObject);
+        DamageParticle();
 
         if (health < 1)
         {
+            transform.DetachChildren();
             Destroy(gameObject);
+
         }
     }
 }

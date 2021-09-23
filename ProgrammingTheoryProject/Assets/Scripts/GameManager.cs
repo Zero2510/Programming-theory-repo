@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    private Text playerNameText;
 
-    public Text playerNameText;
+
 
     void Start()
     {
@@ -18,8 +20,8 @@ public class GameManager : MonoBehaviour
     void UpdatePlayerName()
     {
 
-        playerNameText.text = "Player: " + SaveDataManager.Instance.playerName;
+        playerNameText.text = "Player: " + SaveDataManager.Instance.PlayerName;
 
     }
-
+    
 }

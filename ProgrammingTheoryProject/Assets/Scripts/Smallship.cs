@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Smallship : Enemy
 {
+
     private int health = 2;
 
     // Update is called once per frame
@@ -17,10 +18,14 @@ public class Smallship : Enemy
     {
         health -= 1;
         Destroy(other.gameObject);
+        DamageParticle();
 
         if (health < 1)
         {
+            transform.DetachChildren();
             Destroy(gameObject);
+
+
         }
     }
 
