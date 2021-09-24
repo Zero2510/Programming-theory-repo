@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// INHERITANCE
 public class Sinship : Enemy
 {
 
@@ -29,6 +31,7 @@ public class Sinship : Enemy
         }
     }
 
+    // POLYMORPHISM
     public override void EnemyMovement(float speed)
     {
         transform.Translate(new Vector3(1, Mathf.Sin(Time.time),0) * Time.deltaTime * speed);

@@ -5,8 +5,9 @@ using UnityEngine;
 public class SaveDataManager : MonoBehaviour
 {
     
-    private string playerName;
 
+    private string playerName;
+    // ENCAPSULATION
     public string PlayerName
     {
         get

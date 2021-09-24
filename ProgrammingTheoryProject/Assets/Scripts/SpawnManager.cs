@@ -20,6 +20,8 @@ public class SpawnManager : MonoBehaviour
         SpawnEnemy();
     }
 
+
+    // ABSTRACTION
     void SpawnEnemy()
     {
         Invoke("SpawnEnemy", Random.Range(startDelay, spawnInterval));

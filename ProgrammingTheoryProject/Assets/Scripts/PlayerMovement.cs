@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private GameObject bullets;
-
+    // ENCAPSULATION
     public GameObject Bullets
     {
         get
@@ -37,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
         Shoot();
     }
 
+
+    // ABSTRACTION
     void Shoot()
     {
         if (Input.GetKeyDown(KeyCode.Space))

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Smallship : Enemy
 {
 
@@ -13,6 +14,7 @@ public class Smallship : Enemy
        EnemyMovement(10f);
        OutofBounds();
     }
+
 
     public void OnTriggerEnter(Collider other)
     {
